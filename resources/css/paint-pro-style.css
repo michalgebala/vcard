@@ -1,0 +1,108 @@
+.color-picker{
+    position: absolute;
+    top: 30px;
+    left: 180px;
+    border: 1px solid dimgray;
+}
+.brush-size{
+    min-width: 24px;
+    min-height: 24px;
+    background: url('../icons/brush.png');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left;
+    position: absolute;
+    top: 28px;
+    left: 310px;
+    /*padding-top:10px;*/
+    cursor: pointer;
+    border: 1px solid dimgray;
+
+}
+.brush-size-picker{
+margin-left:28px;
+    margin-top:2px;
+    margin-bottom:auto;
+    margin-right:5px;
+    /*position: absolute;*/
+    /*top: 30px;*/
+    /*left: 380px;*/
+}
+
+.color-preview-box{
+    width:8px;
+    height:8px;
+    border: 1px solid black;
+    float:left;
+    margin:5px;
+}
+.color-preview-box:hover{
+
+    border: 2px solid silver;
+    width:6px;
+    height:6px;
+
+}
+
+.color-preview-box-active{
+
+    border: 3px solid silver;
+    width:11px;
+    height:8px;
+
+}
+
+.shapes-picker{
+    position: absolute;
+    top: 24px;
+    left: 410px;
+    /*padding-top:10px;*/
+    cursor: pointer;
+    border: 1px solid dimgray;
+}
+
+.shapes-picker .square{
+    min-width: 24px;
+    min-height: 24px;
+    background: url('../icons/square.png');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:3px;
+    margin-bottom:3px;
+    float: left;
+    opacity: 0.4;
+}
+
+.shapes-picker .circle{
+    min-width: 24px;
+    min-height: 24px;
+    background: url('../icons/circle.png');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:3px;
+    margin-bottom:3px;
+    float: left;
+    opacity: 0.4;
+}
+
+.shapes-picker .triangle{
+    min-width: 24px;
+    min-height: 24px;
+    background: url('../icons/triangle.png');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:3px;
+    margin-bottom:3px;
+    float: left;
+    opacity: 0.4;
+}
+
+.shapes-picker .triangle:hover, .circle:hover, .square:hover {
+    opacity:1;
+}

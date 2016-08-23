@@ -1,0 +1,18 @@
+<div>
+    <div class="readme-closing" ng-click="showingPaint(false)"></div>
+
+
+    <div class="color-picker"><div ng-repeat="color in colors" class="color-preview-box" ng-class="{'color-preview-box-active': color==selectedColor}" ng-style="{'background-color':color}" ng-click="selectColor(color)"></div></div>
+    <div class="brush-size" ng-click="paintFreeDrawing()"><div class="brush-size-picker">
+        <select ng-model="selectedItem" ng-options="size as size for size in brushSizes"  ng-change="selectBrushSize(selectedItem)">
+
+    </select>
+    </div>
+    </div>
+    <div class="shapes-picker">
+        <div class="square" ng-click="paintRect()"></div>
+        <div class="circle" ng-click="paintCircle()"></div>
+        <div class="triangle" ng-click="paintTriangle()"></div>
+    </div>
+
+</div>

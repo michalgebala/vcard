@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="resources/css/app.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/paint-pro-style.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.3/fabric.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="app.js"></script>
+    <script src="modules/paint/paint-controller.js"></script>
+    <meta charset="UTF-8">
+    <title>Mike's vCard</title>
+</head>
+<body ng-app="vcard" class="main-div">
+
+
+<div ng-controller="VcardController">
+    <div draggable ng-right-click="mainact()" class="icon-placeholder" ng-dblclick="showingLinks(true)">
+        <div class="basic-folder"></div>
+        <span class="folder-label">links</span>
+
+    </div>
+
+
+    <div draggable ng-right-click="mainact()" class="icon-placeholder" >
+        <div class="recycle-folder"></div>
+        <span class="folder-label">Time killers</span>
+
+    </div>
+
+    <div draggable ng-right-click="mainact()" class="icon-placeholder" ng-dblclick="showingReadMe(true)">
+        <div class="txt-file"></div>
+        <span class="folder-label">README.TXT</span>
+
+    </div>
+
+    <div draggable ng-right-click="mainact()" class="icon-placeholder" ng-dblclick="sendMail()">
+        <div class="mail-folder"></div>
+        <span class="folder-label">Send Mail</span>
+
+    </div>
+
+
+
+
+    <div ng-include="'resources/views/start-menu.html'" ng-if="showStartMenu"></div>
+    <div ng-include="'resources/views/transparent-div.html'" ng-if="showStartMenu" ng-click="showingStartMenu()"></div>
+    <div draggable ng-include="'resources/views/readme.html'" ng-if="showReadMe" style="max-width:518px;max-height:586px;"></div>
+    <div draggable ng-include="'resources/views/links-folder.html'" ng-if="showLinks" style="max-width:839px;max-height:539px;"></div>
+    <!--<div draggable ng-bind-html="contentDemotywatory" ng-if="showLinks" style="max-width:839px;max-height:539px;"></div>-->
+    <div class="bottom-toolbar"><div class="start-button" ng-click="showingStartMenu()"></div></div>
+    <div class="closing-div" ng-if="showClosePage"><h1>Please close TAB</h1></div>
+    <div ng-controller="PaintController">
+    <div  class="paint-pro" ng-hide="!showPaint"><div ng-include="'modules/paint/paint-pro.html'"></div><div class="paint-pro-canvas"><canvas id="paint" width="680" height="465"></canvas></div></div>
+    </div>
+
+</div>
+
+</body>
+</html>
