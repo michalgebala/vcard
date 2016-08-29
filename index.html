@@ -48,7 +48,7 @@
     <div draggable ng-include="'resources/views/readme.html'" ng-if="showReadMe" style="max-width:518px;max-height:586px;"></div>
     <div draggable ng-include="'resources/views/links-folder.html'" ng-if="showLinks" style="max-width:839px;max-height:539px;"></div>
     <!--<div draggable ng-bind-html="contentDemotywatory" ng-if="showLinks" style="max-width:839px;max-height:539px;"></div>-->
-    <div class="bottom-toolbar"><div class="start-button" ng-click="showingStartMenu()"></div></div>
+    <div class="bottom-toolbar"><div class="start-button" ng-click="showingStartMenu()"></div><div class="clock-placeholder"><div>{{ clock  | date:'H:mm'}}&nbsp &nbsp{{ clock  | date:'yyyy-MM-dd'}}</div></div></div>
     <div class="closing-div" ng-if="showClosePage"><h1>Please close TAB</h1></div>
     <div ng-controller="PaintController">
     <div  class="paint-pro" ng-hide="!showPaint"><div ng-include="'modules/paint/paint-pro.html'"></div><div class="paint-pro-canvas"><canvas id="paint" width="680" height="465"></canvas></div></div>

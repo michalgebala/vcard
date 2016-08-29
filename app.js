@@ -1,6 +1,6 @@
 'use strict';
 var vcardApp = angular.module('vcard', ['ngSanitize']);
-vcardApp.controller('VcardController', ['$scope', '$sce', '$http', function ($scope, $sce, $http) {
+vcardApp.controller('VcardController', ['$scope','$timeout', '$sce', '$http', function ($scope, $timeout, $sce, $http) {
     $scope.mainact = function () {
         console.log('right click event');
     };
@@ -53,6 +53,18 @@ vcardApp.controller('VcardController', ['$scope', '$sce', '$http', function ($sc
     $scope.showingLinks = function (value) {
         $scope.showLinks = value;
     };
+
+    $scope.clock = "loading"; // initialise the time variable
+    $scope.tickInterval = 1000 //ms
+
+    var tick = function() {
+        $scope.clock = Date.now() // get the current time
+        $timeout(tick, $scope.tickInterval); // reset the timer
+    }
+
+    // Start the timer
+    $timeout(tick, $scope.tickInterval);
+
 
 
 }]);

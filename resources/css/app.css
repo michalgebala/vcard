@@ -250,3 +250,17 @@
     z-index:10000;
     background-color: red;
 }
+
+.clock-placeholder {
+    min-width: 100px;
+    min-height: 24px;
+  /*border: 1px solid #AAAAAA;*/
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    color:#fff;
+    font-size: small;
+
+    /*float: left;*/
+    /*clear: left;*/
+}
