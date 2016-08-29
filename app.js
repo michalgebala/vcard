@@ -63,7 +63,7 @@ vcardApp.controller('VcardController', ['$scope','$timeout', '$sce', '$http', fu
         $timeout(tick, $scope.tickInterval); // reset the timer
     };
     $scope.showSplashScreen = function(){
-        $timeout(changeSplashVisibility, 3000);
+        $timeout(changeSplashVisibility, 5000);
     };
 
     var changeSplashVisibility = function(){
