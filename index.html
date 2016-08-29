@@ -15,6 +15,7 @@
 
 
 <div ng-controller="VcardController">
+    <div class="start-splash-screen" ng-if="startSplashVisible" ng-init="showSplashScreen()"></div>
     <div draggable ng-right-click="mainact()" class="icon-placeholder" ng-dblclick="showingLinks(true)">
         <div class="basic-folder"></div>
         <span class="folder-label">links</span>

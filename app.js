@@ -19,6 +19,7 @@ vcardApp.controller('VcardController', ['$scope','$timeout', '$sce', '$http', fu
     //         $scope.contentDemotywatory = $sce.trustAsHtml(data.data.PageData);
     //         console.log('demotywatoryContent: ',$scope.contentDemotywatory);
     //     });
+    $scope.startSplashVisible = true;
     $scope.showStartMenu = false;
     $scope.showReadMe = false;
     $scope.showLinks = false;
@@ -60,7 +61,14 @@ vcardApp.controller('VcardController', ['$scope','$timeout', '$sce', '$http', fu
     var tick = function() {
         $scope.clock = Date.now() // get the current time
         $timeout(tick, $scope.tickInterval); // reset the timer
-    }
+    };
+    $scope.showSplashScreen = function(){
+        $timeout(changeSplashVisibility, 3000);
+    };
+
+    var changeSplashVisibility = function(){
+        $scope.startSplashVisible = !$scope.startSplashVisible;
+    };
 
     // Start the timer
     $timeout(tick, $scope.tickInterval);
