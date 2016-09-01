@@ -116,9 +116,9 @@
     background-color: #3A3A3A;
     color: #fff;
     font-size: small;
-    width: 30%;
+    width: 260px;
     height: 70%;
-    max-width: 30%;
+    max-width: 260px;
     max-height: 70%;
     position: absolute;
     bottom: 27px;
@@ -169,17 +169,22 @@
 }
 
 .power-button {
-    min-width: 25px;
+    /*min-width: 25px;*/
     min-height: 24px;
     background: url('../icons/power.png');
     background-repeat: no-repeat;
     background-size: 25px 24px;
     background-position: left;
+    width:240px;
     position: absolute;
     bottom: 30px;
     left: 10px;
     padding-top:10px;
     cursor: pointer;
+}
+
+.power-button:hover {
+    background-color:#31343A;
 }
 
 .power-button span {
@@ -293,4 +298,28 @@
     left: 30%;
     font-size: xx-large;
     color: #fff;
+}
+
+.power-menu{
+    color: #fff;
+    font-size: small;
+    border: 1px solid #d3d3d3;
+    background-color:#2b2b2b;
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    width: 245px;
+    height: 80px;
+
+    padding-left:10px;
+    padding-top:15px;
+
+}
+.power-menu div{
+    margin-bottom:10px;
+    cursor: pointer;
+}
+
+.power-menu div:hover{
+    background-color:#31343A;
 }

@@ -1,5 +1,10 @@
 <div class="start-menu">
     <div class="paint-icon" ng-click="showingPaint(true)"><span>Paint</span></div>
-    <div class="power-button" ng-click="showingClosePage(this, true)"><span>Power</span></div>
+    <div class="power-button" ng-click="showingPowerMenu()"><span>Power</span></div>
+    <div class="power-menu" ng-if="showPowerMenu">
+    <div ng-click="showingClosePage(this, true)">Shutdown</div>
+    <div ng-click="restartPage()">Restart</div>
+
+    </div>
 
 </div>

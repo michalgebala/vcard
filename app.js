@@ -25,6 +25,11 @@ vcardApp.controller('VcardController', ['$scope','$timeout', '$sce', '$http', fu
     $scope.showLinks = false;
     $scope.showClosePage = false;
     $scope.showPaint = false;
+    $scope.showPowerMenu = false;
+
+    $scope.showingPowerMenu = function(){
+        $scope.showPowerMenu = !$scope.showPowerMenu;
+    };
 
     $scope.showingClosePage = function (elm, value) {
         $scope.showClosePage = value;
@@ -35,6 +40,9 @@ vcardApp.controller('VcardController', ['$scope','$timeout', '$sce', '$http', fu
         }
 
     };
+    $scope.restartPage = function() {
+        location.reload();
+    }
 
     $scope.showingReadMe = function (value) {
         $scope.showReadMe = value;
@@ -50,6 +58,7 @@ vcardApp.controller('VcardController', ['$scope','$timeout', '$sce', '$http', fu
 
     $scope.showingStartMenu = function () {
         $scope.showStartMenu = !$scope.showStartMenu;
+        $scope.showPowerMenu = false;
     };
     $scope.showingLinks = function (value) {
         $scope.showLinks = value;
